@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <Description>DataGateway's Snowflake engine. Register it with AddEngine to serve catalogued Snowflake sources.</Description>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <RestorePackagesWithLockFile>true</RestorePackagesWithLockFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="../DataGateway.Data/DataGateway.Data.csproj" />
+    <PackageReference Include="SqlKata" Version="4.0.1" />
+    <PackageReference Include="Snowflake.Data" Version="[6.5.0]" />
+  </ItemGroup>
+</Project>

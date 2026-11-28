@@ -3,6 +3,7 @@
   <Project Path="DataGateway.Data/DataGateway.Data.csproj" />
   <Project Path="DataGateway.Data.SqlServer/DataGateway.Data.SqlServer.csproj" />
   <Project Path="DataGateway.Data.PostgreSql/DataGateway.Data.PostgreSql.csproj" />
+  <Project Path="DataGateway.Data.Snowflake/DataGateway.Data.Snowflake.csproj" />
   <Project Path="DataGateway.Data.Sqlite/DataGateway.Data.Sqlite.csproj" />
   <Project Path="DataGateway/DataGateway.csproj" />
   <Project Path="DataGateway.Web/DataGateway.Web.csproj" />

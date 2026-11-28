@@ -84,7 +84,7 @@
         "type": "Project",
         "dependencies": {
           "Dapper.Data": "[3.1.2, )",
-          "DataGateway.Core": "[1.0.0-preview.2, )"
+          "DataGateway.Core": "[1.0.0, )"
         }
       }
     }

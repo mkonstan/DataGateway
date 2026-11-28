@@ -52,6 +52,7 @@ Await one consumer scope with single enumeration. Return detached ordered row di
 | --- | --- | --- |
 | [SqlServerEngine](DataGateway.Data.SqlServer/SqlServerEngine.cs) | `sqlserver` | Supported. [Source validation](DataGateway.Data.SqlServer/SqlServerEngine.Source.cs) requires a server. The example host separately requires an explicit catalog database. |
 | [PostgreSqlEngine](DataGateway.Data.PostgreSql/PostgreSqlEngine.cs) | `postgresql` | Supported. Requires explicit host/database/username. |
+| [SnowflakeEngine](DataGateway.Data.Snowflake/SnowflakeEngine.cs) | `snowflake` | Supported. Views are named `schema.view` or `view` in the connection's database; text comparison follows the column's collation (case-sensitive by default). See its [README](DataGateway.Data.Snowflake/README.md). |
 | [SqliteEngine](DataGateway.Data.Sqlite/SqliteEngine.cs) | `sqlite` | Tests-only. Requires a file data source, ReadOnly and pooling disabled. See the [finite proof boundary](DataGateway.Data.Sqlite/README.md#proof-boundary). |
 
 Register distinct aliases to select variants per source. No new public error-code design or runtime discovery is needed.

@@ -15,6 +15,7 @@
     <ProjectReference Include="../../DataGateway.Web/DataGateway.Web.csproj" />
     <ProjectReference Include="../../DataGateway.Data.SqlServer/DataGateway.Data.SqlServer.csproj" />
     <ProjectReference Include="../../DataGateway.Data.PostgreSql/DataGateway.Data.PostgreSql.csproj" />
+    <ProjectReference Include="../../DataGateway.Data.Snowflake/DataGateway.Data.Snowflake.csproj" />
     <ProjectReference Include="../../DataGateway.Data.Sqlite/DataGateway.Data.Sqlite.csproj" />
     <ProjectReference Include="../../DataGateway.Demo/DataGateway.Demo.csproj" />
     <ProjectReference Include="../../DataGateway.Proxy/DataGateway.Proxy.csproj" Aliases="RegistrationProxy" />

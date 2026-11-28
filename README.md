@@ -7,17 +7,17 @@ The app owns authentication, authorization, catalog storage and logging provider
 ## Install from NuGet
 
 ```powershell
-dotnet add package DataGateway --prerelease
-dotnet add package DataGateway.Data.PostgreSql --prerelease   # or DataGateway.Data.SqlServer
+dotnet add package DataGateway
+dotnet add package DataGateway.Data.PostgreSql   # or DataGateway.Data.SqlServer, DataGateway.Data.Snowflake
 ```
 
-DataGateway brings DataGateway.Core and DataGateway.Data. The engine packages DataGateway.Data.PostgreSql and DataGateway.Data.SqlServer serve those databases. For any other ADO.NET provider, derive `DatabaseEngine<TConnection>` from DataGateway.Data: [ENGINES.md](https://github.com/mkonstan/DataGateway/blob/main/ENGINES.md) walks through its five members; the PostgreSQL, SQL Server and SQLite engines in this repository are 60 to 85 lines each.
+DataGateway brings DataGateway.Core and DataGateway.Data. The engine packages DataGateway.Data.PostgreSql, DataGateway.Data.SqlServer and DataGateway.Data.Snowflake serve those databases. For any other ADO.NET provider, derive `DatabaseEngine<TConnection>` from DataGateway.Data: [ENGINES.md](https://github.com/mkonstan/DataGateway/blob/main/ENGINES.md) walks through its five members; the PostgreSQL, SQL Server, Snowflake and SQLite engines in this repository are worked examples.
 
 ## Add it to a new app
 
 Install the .NET 10 SDK and PowerShell 7. Restore needs the pinned packages cached or an accessible package feed. Start PowerShell in the exported public source root. Use a previously unused `GatewaySample` sibling directory. The app will be outside the source tree.
 
-SQL Server and PostgreSQL are supported engines. This walkthrough uses the tests-only SQLite proof adapter to avoid a database server. It does not establish production SQLite support.
+SQL Server, PostgreSQL and Snowflake are supported engines. This walkthrough uses the tests-only SQLite proof adapter to avoid a database server. It does not establish production SQLite support.
 
 ```powershell
 $sourceRoot = (Get-Location).Path
@@ -587,7 +587,7 @@ Catalog invocation exceptions are sanitized to `CatalogUnavailable`, with except
 - `DataGateway`: the reusable ASP.NET Core library, named registrations, JSON/MCP endpoints and optional API page.
 - `DataGateway.Core`: pure catalog, validation and query rules with no I/O.
 - `DataGateway.Data`: public app-owned catalog abstraction and query-only engine contract/base.
-- `DataGateway.Data.SqlServer` and `DataGateway.Data.PostgreSql`: supported query engines.
+- `DataGateway.Data.SqlServer`, `DataGateway.Data.PostgreSql` and `DataGateway.Data.Snowflake`: supported query engines; Snowflake's catalog rules and comparison differences are in its [README](https://github.com/mkonstan/DataGateway/blob/main/DataGateway.Data.Snowflake/README.md).
 - `DataGateway.Data.Sqlite`: tests-only proof; see its [boundary](DataGateway.Data.Sqlite/README.md#proof-boundary).
 - `DataGateway.Web`: example host with its own catalog storage, Windows sign-in and logging providers.
 - `DataGateway.Demo` and `DataGateway.Proxy`: example clients; see the host README.

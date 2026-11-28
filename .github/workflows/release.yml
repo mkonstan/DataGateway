@@ -17,7 +17,7 @@ jobs:
       contents: read
     env:
       # The packages this release publishes.
-      PACKAGES: DataGateway/DataGateway.csproj DataGateway.Core/DataGateway.Core.csproj DataGateway.Data/DataGateway.Data.csproj DataGateway.Data.PostgreSql/DataGateway.Data.PostgreSql.csproj DataGateway.Data.SqlServer/DataGateway.Data.SqlServer.csproj
+      PACKAGES: DataGateway/DataGateway.csproj DataGateway.Core/DataGateway.Core.csproj DataGateway.Data/DataGateway.Data.csproj DataGateway.Data.PostgreSql/DataGateway.Data.PostgreSql.csproj DataGateway.Data.SqlServer/DataGateway.Data.SqlServer.csproj DataGateway.Data.Snowflake/DataGateway.Data.Snowflake.csproj
     steps:
       - uses: actions/checkout@v4
 

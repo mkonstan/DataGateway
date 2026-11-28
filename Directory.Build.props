@@ -7,7 +7,6 @@
   <!-- NuGet packages: every package shares one version. Apps, tools and test projects set IsPackable false. -->
   <PropertyGroup>
     <VersionPrefix>1.0.0</VersionPrefix>
-    <VersionSuffix>preview.7</VersionSuffix>
     <Authors>Maxim Konstantinovski</Authors>
     <Copyright>Copyright 2026 Maxim Konstantinovski</Copyright>
     <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
@@ -21,7 +20,7 @@
     <IncludeSymbols>true</IncludeSymbols>
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
     <!-- IntelliSense: ship the XML docs that exist. CS1591 (public member without a doc comment) is silenced until
-         every public member is documented, a 1.0.0 task. -->
+         every public member is documented. -->
     <GenerateDocumentationFile Condition="'$(IsPackable)' != 'false'">true</GenerateDocumentationFile>
     <NoWarn Condition="'$(IsPackable)' != 'false'">$(NoWarn);CS1591</NoWarn>
     <ContinuousIntegrationBuild Condition="'$(GITHUB_ACTIONS)' == 'true'">true</ContinuousIntegrationBuild>
